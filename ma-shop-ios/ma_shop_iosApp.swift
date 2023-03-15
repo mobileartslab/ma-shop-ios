@@ -1,20 +1,11 @@
-//
-//  ma_shop_iosApp.swift
-//  ma-shop-ios
-//
-//  Created by Nick Sophinos on 3/6/23.
-//
-
 import SwiftUI
 
 @main
-struct ma_shop_iosApp: App {
-    let persistenceController = PersistenceController.shared
+struct ma_com_iosApp: App {
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+  var body: some Scene {
+    WindowGroup {
+      LoginView()
     }
+  }
 }

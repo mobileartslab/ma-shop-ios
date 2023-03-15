@@ -13,6 +13,7 @@
 		0106F12D29B5BC7B008A2135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0106F12C29B5BC7B008A2135 /* Preview Assets.xcassets */; };
 		0106F12F29B5BC7B008A2135 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106F12E29B5BC7B008A2135 /* Persistence.swift */; };
 		0106F13229B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0106F13029B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld */; };
+		012CB92529C2287500399F45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012CB92429C2287500399F45 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		0106F12C29B5BC7B008A2135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0106F12E29B5BC7B008A2135 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0106F13129B5BC7B008A2135 /* ma_shop_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ma_shop_ios.xcdatamodel; sourceTree = "<group>"; };
+		012CB92429C2287500399F45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0182E28829B6AFF9005C99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				0106F12E29B5BC7B008A2135 /* Persistence.swift */,
 				0106F13029B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld */,
 				0106F12B29B5BC7B008A2135 /* Preview Content */,
+				012CB92429C2287500399F45 /* LoginView.swift */,
 			);
 			path = "ma-shop-ios";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				0106F12F29B5BC7B008A2135 /* Persistence.swift in Sources */,
 				0106F13229B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld in Sources */,
 				0106F12829B5BC7A008A2135 /* ContentView.swift in Sources */,
+				012CB92529C2287500399F45 /* LoginView.swift in Sources */,
 				0106F12629B5BC7A008A2135 /* ma_shop_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
