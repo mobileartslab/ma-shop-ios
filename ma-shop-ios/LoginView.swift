@@ -11,28 +11,32 @@ struct LoginView: View {
   }
   
   var body: some View {
-    VStack {
-      WelcomeText()
-      UserImage()
+    NavigationView {
+      VStack {
+        WelcomeText()
+        UserImage()
+        
+        TextField("Username", text: $username)
+          .padding()
+          .background(lightGreyColor)
+          .cornerRadius(5.0)
+          .padding(.bottom, 20)
+        
+        SecureField("Password", text: $password)
+          .padding()
+          .background(lightGreyColor)
+          .cornerRadius(5.0)
+          .padding(.bottom, 20)
+        
+        NavigationLink(destination: MainView()) {
+          Button(action: {print("Button tapped")}) {
+            LoginButtonContent()
+          }.disabled(isSignInButtonDisabled)
+        }
+      }
+      .padding()
       
-      TextField("Username", text: $username)
-        .padding()
-        .background(lightGreyColor)
-        .cornerRadius(5.0)
-        .padding(.bottom, 20)
-      
-      SecureField("Password", text: $password)
-        .padding()
-        .background(lightGreyColor)
-        .cornerRadius(5.0)
-        .padding(.bottom, 20)
-      
-      Button(action: {print("Button tapped")}) {
-        LoginButtonContent()
-      }.disabled(isSignInButtonDisabled)
     }
-    .padding()
-
   }
 }
   
