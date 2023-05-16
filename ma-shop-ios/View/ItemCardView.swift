@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ArticleCardView: View {
+struct ItemCardView: View {
     
   let category: String
   let headline: String
@@ -66,15 +66,15 @@ struct ArticleCardView: View {
 
 struct ArticleCardView_Previews: PreviewProvider {
   static var previews: some View {
-    ArticleCardView(category: sampleArticles[0].category, headline: sampleArticles[0].headline, subHeadline: sampleArticles[0].subHeadline, image: sampleArticles[0].image, content: sampleArticles[0].content, isShowContent: .constant(false))
+    ItemCardView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, image: sampleInventory[0].image, content: sampleInventory[0].content, isShowContent: .constant(false))
         .previewDisplayName("Card View (no Content)")
 
-    ArticleCardView(category: sampleArticles[1].category, headline: sampleArticles[1].headline, subHeadline: sampleArticles[1].subHeadline, image: sampleArticles[1].image, content: sampleArticles[1].content, isShowContent: .constant(true))
+    ItemCardView(category: sampleInventory[1].category, headline: sampleInventory[1].headline, subHeadline: sampleInventory[1].subHeadline, image: sampleInventory[1].image, content: sampleInventory[1].content, isShowContent: .constant(true))
         .previewDisplayName("Card View (with Content)")
         
-    ArticleExcerptView(category: sampleArticles[0].category, headline: sampleArticles[0].headline, subHeadline: sampleArticles[0].subHeadline, isShowContent: .constant(false)).previewLayout(.fixed(width: 380, height: 500))
+    ArticleExcerptView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, isShowContent: .constant(false)).previewLayout(.fixed(width: 380, height: 500))
         
-    ArticleExcerptView(category: sampleArticles[0].category, headline: sampleArticles[0].headline, subHeadline: sampleArticles[0].subHeadline, isShowContent: .constant(true)).previewLayout(.fixed(width: 380, height: 500))
+    ArticleExcerptView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, isShowContent: .constant(true)).previewLayout(.fixed(width: 380, height: 500))
   }
 }
 

@@ -11,8 +11,8 @@ struct MainView: View {
       ScrollView {
         VStack(spacing: 40) {
           TopBarView().padding(.horizontal, 20)
-          ForEach(sampleArticles.indices, id: \.self) { index in
-            ArticleCardView(category: sampleArticles[index].category, headline: sampleArticles[index].headline, subHeadline: sampleArticles[index].subHeadline, image: sampleArticles[index].image, content: sampleArticles[index].content, isShowContent: $showContent)
+          ForEach(sampleInventory.indices, id: \.self) { index in
+            ItemCardView(category: sampleInventory[index].category, headline: sampleInventory[index].headline, subHeadline: sampleInventory[index].subHeadline, image: sampleInventory[index].image, content: sampleInventory[index].content, isShowContent: $showContent)
                 .padding(.horizontal, 20)
                 .matchedGeometryEffect(id: index, in: nsArticle)
                 .onTapGesture {
@@ -20,13 +20,13 @@ struct MainView: View {
                 self.selectedArticleIndex = index
                 self.showContent.toggle()
               }
-            }.frame(height: min(sampleArticles[index].image.size.height/3, 500))
+            }.frame(height: min(sampleInventory[index].image.size.height/3, 500))
           }
         }
       }.opacity(showContent ? 0 : 1)
           
       if showContent, let selectedArticleIndex {
-        ArticleCardView(category: sampleArticles[selectedArticleIndex].category, headline: sampleArticles[selectedArticleIndex].headline, subHeadline: sampleArticles[selectedArticleIndex].subHeadline, image: sampleArticles[selectedArticleIndex].image, content: sampleArticles[selectedArticleIndex].content, isShowContent: $showContent)
+        ItemCardView(category: sampleInventory[selectedArticleIndex].category, headline: sampleInventory[selectedArticleIndex].headline, subHeadline: sampleInventory[selectedArticleIndex].subHeadline, image: sampleInventory[selectedArticleIndex].image, content: sampleInventory[selectedArticleIndex].content, isShowContent: $showContent)
           .matchedGeometryEffect(id: selectedArticleIndex, in: nsArticle)
           .ignoresSafeArea()
         }
