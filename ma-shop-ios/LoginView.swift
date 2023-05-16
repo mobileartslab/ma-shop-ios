@@ -28,7 +28,7 @@ struct LoginView: View {
           .cornerRadius(5.0)
           .padding(.bottom, 20)
         
-        NavigationLink(destination: MainView()) {
+        NavigationLink(destination: MainView().navigationBarBackButtonHidden(true)) {
           Button(action: {print("Button tapped")}) {
             LoginButtonContent()
           }.disabled(isSignInButtonDisabled)

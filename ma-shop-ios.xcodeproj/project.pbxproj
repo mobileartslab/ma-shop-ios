@@ -14,6 +14,8 @@
 		0106F13229B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0106F13029B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld */; };
 		01135DF729C42A1700402AEC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01135DF629C42A1700402AEC /* MainView.swift */; };
 		012CB92529C2287500399F45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012CB92429C2287500399F45 /* LoginView.swift */; };
+		018053B02A1348D000D559ED /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018053AF2A1348D000D559ED /* Inventory.swift */; };
+		018053B32A1349CA00D559ED /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018053B22A1349CA00D559ED /* ItemCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		0106F13129B5BC7B008A2135 /* ma_shop_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ma_shop_ios.xcdatamodel; sourceTree = "<group>"; };
 		01135DF629C42A1700402AEC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		012CB92429C2287500399F45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		018053AF2A1348D000D559ED /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		018053B22A1349CA00D559ED /* ItemCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		0182E28829B6AFF9005C99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +62,8 @@
 		0106F12429B5BC7A008A2135 /* ma-shop-ios */ = {
 			isa = PBXGroup;
 			children = (
+				018053B12A1349B700D559ED /* View */,
+				018053AE2A13488E00D559ED /* Model */,
 				0182E28829B6AFF9005C99F8 /* Info.plist */,
 				0106F12529B5BC7A008A2135 /* ma_shop_iosApp.swift */,
 				0106F12929B5BC7B008A2135 /* Assets.xcassets */,
@@ -76,6 +82,22 @@
 				0106F12C29B5BC7B008A2135 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		018053AE2A13488E00D559ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				018053AF2A1348D000D559ED /* Inventory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		018053B12A1349B700D559ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				018053B22A1349CA00D559ED /* ItemCardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018053B32A1349CA00D559ED /* ItemCardView.swift in Sources */,
 				0106F12F29B5BC7B008A2135 /* Persistence.swift in Sources */,
 				0106F13229B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld in Sources */,
+				018053B02A1348D000D559ED /* Inventory.swift in Sources */,
 				012CB92529C2287500399F45 /* LoginView.swift in Sources */,
 				01135DF729C42A1700402AEC /* MainView.swift in Sources */,
 				0106F12629B5BC7A008A2135 /* ma_shop_iosApp.swift in Sources */,
