@@ -43,7 +43,7 @@ struct TopBarView : View {
         Text("Today").font(.largeTitle).fontWeight(.heavy)
       }
       Spacer()
-      AvatarView(image: "profile", width: 40, height: 40)
+      AvatarView(image: "jack", width: 40, height: 40)
     }
   }
     
