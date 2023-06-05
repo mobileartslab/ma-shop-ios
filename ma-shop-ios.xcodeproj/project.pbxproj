@@ -16,6 +16,8 @@
 		012CB92529C2287500399F45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012CB92429C2287500399F45 /* LoginView.swift */; };
 		018053B02A1348D000D559ED /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018053AF2A1348D000D559ED /* Inventory.swift */; };
 		018053B32A1349CA00D559ED /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018053B22A1349CA00D559ED /* ItemCardView.swift */; };
+		01E0934E2A2DAE30008664B1 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E0934D2A2DAE30008664B1 /* NavigationView.swift */; };
+		01E093502A2DAEC5008664B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E0934F2A2DAEC5008664B1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		018053AF2A1348D000D559ED /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		018053B22A1349CA00D559ED /* ItemCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		0182E28829B6AFF9005C99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01E0934D2A2DAE30008664B1 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		01E0934F2A2DAEC5008664B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				0106F12B29B5BC7B008A2135 /* Preview Content */,
 				012CB92429C2287500399F45 /* LoginView.swift */,
 				01135DF629C42A1700402AEC /* MainView.swift */,
+				01E0934D2A2DAE30008664B1 /* NavigationView.swift */,
+				01E0934F2A2DAEC5008664B1 /* Constants.swift */,
 			);
 			path = "ma-shop-ios";
 			sourceTree = "<group>";
@@ -172,11 +178,13 @@
 			files = (
 				018053B32A1349CA00D559ED /* ItemCardView.swift in Sources */,
 				0106F12F29B5BC7B008A2135 /* Persistence.swift in Sources */,
+				01E0934E2A2DAE30008664B1 /* NavigationView.swift in Sources */,
 				0106F13229B5BC7B008A2135 /* ma_shop_ios.xcdatamodeld in Sources */,
 				018053B02A1348D000D559ED /* Inventory.swift in Sources */,
 				012CB92529C2287500399F45 /* LoginView.swift in Sources */,
 				01135DF729C42A1700402AEC /* MainView.swift in Sources */,
 				0106F12629B5BC7A008A2135 /* ma_shop_iosApp.swift in Sources */,
+				01E093502A2DAEC5008664B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
