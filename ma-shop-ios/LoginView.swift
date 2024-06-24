@@ -10,7 +10,7 @@ struct LoginView: View {
   @State var submitError: String = ""
   
   @ObservedObject var screens: Screens
-  
+    
   var body: some View {
     @EnvironmentObject var screens: Screens
       VStack {
@@ -83,10 +83,10 @@ struct LoginView: View {
     if (!validate()) {
       return
     }
-    guard let url = URL(string: "http://192.168.86.29:8000/api/public/login") else {
+    guard let url = URL(string: "http://192.168.86.21:8000/api/public/login") else {
       return
     }
-
+      
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -198,6 +198,7 @@ struct Result: Codable {
   let username, salt, password: String
   let authStatus: Int
 }
+
 
 class JSONNull: Codable, Hashable {
 

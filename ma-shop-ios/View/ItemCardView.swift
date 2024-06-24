@@ -4,8 +4,8 @@ struct ItemCardView: View {
     
   let category: String
   let headline: String
-  let subHeadline: String
-  let image: UIImage
+  let subheadline: String
+  let image: String
   var content: String = ""
     
   @Binding var isShowContent: Bool
@@ -15,14 +15,13 @@ struct ItemCardView: View {
       ZStack(alignment: .topTrailing) {
         ScrollView {
           VStack(alignment: .leading) {
-            Image(uiImage: self.image)
-              .resizable()
+              AsyncImage(url: URL(string: "http://192.168.86.21:8000/ngh/" + image))
               .scaledToFill()
-              .frame(width: geometry.size.width, height: self.isShowContent ? geometry.size.height * 0.7 : min(self.image.size.height/3, 500))
+              .frame(width: geometry.size.width, height: self.isShowContent ? geometry.size.height * 0.7 : 200)
               .border(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), width: self.isShowContent ? 0 : 1)
               .cornerRadius(15)
               .overlay(
-                ArticleExcerptView(category: self.category, headline: self.headline, subHeadline: self.subHeadline, isShowContent: self.$isShowContent)
+                ArticleExcerptView(category: self.category, headline: self.headline, subheadline: self.subheadline, isShowContent: self.$isShowContent)
                   .cornerRadius(self.isShowContent ? 0 : 15)
                )
                         
@@ -64,25 +63,12 @@ struct ItemCardView: View {
     }
 }
 
-struct ArticleCardView_Previews: PreviewProvider {
-  static var previews: some View {
-    ItemCardView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, image: sampleInventory[0].image, content: sampleInventory[0].content, isShowContent: .constant(false))
-        .previewDisplayName("Card View (no Content)")
-
-    ItemCardView(category: sampleInventory[1].category, headline: sampleInventory[1].headline, subHeadline: sampleInventory[1].subHeadline, image: sampleInventory[1].image, content: sampleInventory[1].content, isShowContent: .constant(true))
-        .previewDisplayName("Card View (with Content)")
-        
-    ArticleExcerptView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, isShowContent: .constant(false)).previewLayout(.fixed(width: 380, height: 500))
-        
-    ArticleExcerptView(category: sampleInventory[0].category, headline: sampleInventory[0].headline, subHeadline: sampleInventory[0].subHeadline, isShowContent: .constant(true)).previewLayout(.fixed(width: 380, height: 500))
-  }
-}
 
 
 struct ArticleExcerptView: View {
   let category: String
   let headline: String
-  let subHeadline: String
+  let subheadline: String
     
   @Binding var isShowContent: Bool
     
@@ -109,7 +95,7 @@ struct ArticleExcerptView: View {
               .padding(.bottom, 5)
                             
             if !self.isShowContent {
-              Text(self.subHeadline)
+              Text(self.subheadline)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .minimumScaleFactor(0.1)

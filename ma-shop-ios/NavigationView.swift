@@ -1,7 +1,7 @@
 import SwiftUI
 
 class Screens: ObservableObject {
-    @Published var currentScreen = 1
+    @Published var currentScreen = 2
 }
 
 struct NavigationView: View {
