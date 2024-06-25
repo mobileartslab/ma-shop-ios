@@ -20,12 +20,10 @@ struct LoginView: View {
                    .padding(.trailing, 55)
       VStack {
         
-        TextField("Username", text: $username)
+        TextField("username", text: $username)
           .padding()
-          .background(lightGreyColor)
-          .cornerRadius(5.0)
-          .padding(.bottom, 10)
           .textInputAutocapitalization(.never)
+          .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.white, style: StrokeStyle(lineWidth: 1.0)))
         
         HStack {
           Text( usernameError )
@@ -38,13 +36,12 @@ struct LoginView: View {
              .foregroundColor(Color.red)
              .font(.footnote)
           }
-        }.padding(.bottom, 20).frame(maxWidth: .infinity, alignment: .leading)
+        }.padding(.bottom, 10).frame(maxWidth: .infinity, alignment: .leading)
         
-        SecureField("Password", text: $password)
+        SecureField("password", text: $password)
           .padding()
-          .background(lightGreyColor)
-          .cornerRadius(5.0)
-          .padding(.bottom, 10)
+          .textInputAutocapitalization(.never)
+          .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.white, style: StrokeStyle(lineWidth: 1.0)))
         
         HStack {
           Text( passwordError )
@@ -57,11 +54,12 @@ struct LoginView: View {
              .foregroundColor(Color.red)
              .font(.footnote)
           }
-        }.padding(.bottom, 20).frame(maxWidth: .infinity, alignment: .leading)
+        }.padding(.bottom, 10).frame(maxWidth: .infinity, alignment: .leading)
         
         Button(action: handleSubmit) {
           LoginButtonContent()
         }
+        .buttonStyle(PlainButtonStyle())
       
        
         HStack {
@@ -76,9 +74,12 @@ struct LoginView: View {
              .font(.footnote)
           }
         }.padding(.top, 20)
+          
+        Spacer();
         
       }
-      .padding()
+      .padding(.horizontal, 150)
+      .padding(.top, 70)
   }
   
   
@@ -159,13 +160,9 @@ struct LoginView: View {
 
 struct LoginButtonContent : View {
   var body: some View {
-    return Text("LOGIN")
-      .font(.headline)
-      .foregroundColor(.white)
-      .padding()
-      .frame(width: 220, height: 60)
-      .background(Color.green)
-      .cornerRadius(15.0)
+    return Text("Login")
+      .foregroundColor(.blue)
+      .font(.title)
   }
 }
 

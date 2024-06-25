@@ -51,7 +51,7 @@ struct MainView: View {
                 self.selectedArticleIndex = index
                 self.showContent.toggle()
               }
-            }.frame(height: min(sampleInventory[index].image.size.height/3, 500))
+            }.frame(height: 200)
           }
         }
       }
