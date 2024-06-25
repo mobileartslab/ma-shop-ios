@@ -13,9 +13,12 @@ struct LoginView: View {
     
   var body: some View {
     @EnvironmentObject var screens: Screens
+      Image("nicks-guitar-heaven-tall") 
+          .resizable()
+                   .aspectRatio(contentMode: .fill)
+                   .edgesIgnoringSafeArea(.all)
+                   .padding(.trailing, 55)
       VStack {
-        WelcomeText()
-        UserImage()
         
         TextField("Username", text: $username)
           .padding()
@@ -150,27 +153,6 @@ struct LoginView: View {
       isValid = false
     }
     return isValid
-  }
-}
-
-
-struct WelcomeText : View {
-  var body: some View {
-    return Text("Shopper")
-      .font(.largeTitle)
-      .fontWeight(.semibold)
-      .padding(.bottom, 20)
-    }
-}
-
-
-struct UserImage : View {
-  var body: some View {
-    return Image("appLogo")
-      .resizable()
-      .aspectRatio(contentMode: .fill)
-      .frame(width: 150, height: 150)
-      .padding(.bottom, 75)
   }
 }
 
